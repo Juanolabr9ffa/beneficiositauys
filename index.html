@@ -105,6 +105,34 @@
       color: #e65c00;
       text-decoration: underline;
     }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: none;
+      }
+      select, input, button {
+        font-size: 14px;
+        padding: 10px;
+        margin: 8px 0;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .btn-ingresar {
+        padding: 4px 8px;
+        font-size: 13px;
+      }
+      .logo img {
+        height: 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -152,6 +180,7 @@
       <a href="#">Olvidé mi contraseña</a>
     </div>
   </div>
+
 
   <script>
     var ipAddress = "";
